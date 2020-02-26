@@ -181,6 +181,46 @@ img, video{
 
 
 
+
+
+h1, .h1{
+  font-weight: 700;
+  font-size: 38px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  @media (max-width:1200px){
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  @media (max-width:991px){
+    font-size: 28px; margin-bottom: 25px;
+  }
+  @media (max-width:767px){
+    font-size: 26px; margin-bottom: 20px;
+  }
+  @media (max-width:575px){
+    font-size: 24px; margin-bottom: 15px;
+  }
+}
+
+h3, .h3{
+  font-weight: 700;
+  font-size: 22px;
+  color: @black;
+  margin-bottom: 25px;
+  @media (max-width:991px){
+    font-size: 20px; margin-bottom: 25px;
+  }
+  @media (max-width:767px){
+    font-size: 18px; margin-bottom: 20px;
+  }
+}
+
+
+
+
+
 .top-header{
     background: @green_dark;
 }
@@ -1006,12 +1046,26 @@ img, video{
 strong{
   font-weight: 700;
 }
+
+.contacts-row{
+  > div{
+    @media (max-width:1200px){
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .contacts-row__content{
   background: #fff;
   .box-shadow(0 7px 20px rgba(0, 0, 0, 0.15));
   .border-radius(3px);
   padding: 30px;
   height: 100%;
+
+  @media (max-width:767px){
+    padding: 15px;
+  }
+
 }
 
 .contacts-row__content_group{
@@ -1079,6 +1133,9 @@ strong{
     }
     .btn-default{
       height: 40px;
+      @media (max-width:767px){
+        max-width: 100%;
+      }
     }
   }
 
@@ -1250,26 +1307,7 @@ footer{
   }
 }
 
-h1, .h1{
-  font-weight: 700;
-  font-size: 38px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin-bottom: 35px;
-  @media (max-width:1200px){
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-  @media (max-width:991px){
-    font-size: 28px; margin-bottom: 25px;
-  }
-  @media (max-width:767px){
-    font-size: 26px; margin-bottom: 20px;
-  }
-  @media (max-width:575px){
-    font-size: 24px; margin-bottom: 15px;
-  }
-}
+
 
 
 .breadcrumb{
@@ -1290,7 +1328,8 @@ h1, .h1{
         &:before{
           .b_a();
           left: 0;
-          top: 4px;
+          top: 0;
+          bottom: 0;
           margin: auto;
           width: 14px;
           height: 13px;
@@ -1732,4 +1771,19 @@ h1, .h1{
       }
     }
   }
+}
+
+
+.contacts-desc{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  @media (max-width:767px){
+    font-size: 14px;
+  }
+}
+
+
+a[href^="mailto"]{
+  word-break: break-word;
 }
