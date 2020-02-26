@@ -1651,6 +1651,7 @@ footer{
     .nav-item{
       margin-bottom: 0;
       padding-right: 5px;
+      padding-left: 0;
       &:last-child{
         padding-right: 0;
       }
@@ -2110,7 +2111,12 @@ a[data-fancybox]{
 
 }
 
-
+.about-desc{
+  padding-top: 50px;
+  @media (max-width:767px){
+    padding-top: 30px;
+  }
+}
 
 .download-catalog{
   position: relative;
@@ -2244,3 +2250,28 @@ hr{
   }
 
 }
+
+@media (min-width:576px){
+  .modal-dialog {
+    max-width: 432px;
+  }
+}
+
+.modal-content{
+  border:0;
+  .border-radius(3px);
+}
+
+.modal-body{
+  padding: 30px;
+  .close{
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z' fill='%23232323' fill-opacity='0.35'/%3e%3c/svg%3e ");
+    opacity: 1;
+    position: absolute;
+    right: 15px;
+    top:15px;
+  }
+}
+
