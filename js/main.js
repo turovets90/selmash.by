@@ -39,6 +39,12 @@ $(document).ready(function(){
     });
 
 
+    $('.sidebar-menu .arrow').click(function(){
+       $(this).next().slideToggle();
+       $(this).parent().toggleClass('active');
+    });
+
+
 });
 
 
