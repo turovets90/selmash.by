@@ -652,6 +652,9 @@ h3, .h3{
   @media (max-width:767px){
     height: 40px;font-size: 14px;
   }
+  @media (max-width:575px){
+    max-width: 100%;
+  }
 }
 
 
@@ -2284,7 +2287,17 @@ hr{
 
 .pr-list{
   >div{
+    .transition(@transition_default);
     margin-bottom: 40px;
+    &:hover{
+      .transform(scale(1.1));
+      .text{
+        color: @green_dark;
+      }
+      .icon{
+        background: @green_dark;
+      }
+    }
     @media (max-width:1200px){
       margin-bottom: 30px;
     }
@@ -2295,6 +2308,9 @@ hr{
   .icon{
     margin-right: 15px;
   }
+  .text{
+    .transition(@transition_default);
+  }
 }
 .icon{
   min-width: 60px;
@@ -2303,6 +2319,7 @@ hr{
   .border-radius(50%);
   position: relative;
   background: @green;
+  .transition(@transition_default);
   img{
     position: absolute;
     .m_a();
@@ -2342,8 +2359,10 @@ header{
   .logo{
     img{
       @media (max-width:575px){
-        max-height: 50px;
+        //max-height: 50px;
       }
     }
   }
 }
+
+
